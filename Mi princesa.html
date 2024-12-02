@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz 2 Meses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+        .flower {
+            width: 50px;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .active {
+            opacity: 1;
+        }
+        .message {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feliz Segundo Mes, Mi Amor 💙</h1>
+    
+    <!-- Imagen de margarita -->
+    <img src="margarita.png" class="flower" id="flower1">
+    <img src="margarita.png" class="flower" id="flower2">
+    <img src="margarita.png" class="flower" id="flower3">
+    
+    <div class="message" id="message"></div>
+
+    <!-- Botón para ver mensaje final -->
+    <button class="button" onclick="showMessage()">Haz Clic Aquí</button>
+
+    <audio id="music" autoplay loop>
+        <source src="can’t_help_falling_in_love.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        let flowers = document.querySelectorAll('.flower');
+        
+        // Función para hacer crecer las margaritas
+        function growFlowers() {
+            flowers.forEach(flower => flower.classList.add('active'));
+        }
+        
+        // Función para mostrar el mensaje final
+        function showMessage() {
+            const messageElement = document.getElementById('message');
+            messageElement.innerHTML = `
+                Mi princesa, quiero agradecerte por todo lo que me has dado, 
+                son cosas que me demuestran que me amas. Hoy te entrego este pequeño 
+                detalle en el que estuve trabajando para conmemorar que hoy es un día 
+                muy especial. Celebramos dos meses de ser la mejor pareja del mundo y 
+                somos los más felices. A lo mejor no es mucho, pero es con mucho amor. 
+                Te amo y quiero que nunca lo olvides.
+            `;
+        }
+        
+        // Iniciar la animación de flores después de 2 segundos
+        setTimeout(growFlowers, 2000);
+    </script>
+
+</body>
+</html>
+
+
